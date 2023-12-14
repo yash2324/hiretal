@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Orbitron:wght@400;800&family=Ubuntu&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  margin: 8;
+}
+.logo {
+  font-family: "Archivo", sans-serif;
+  font-weight: 1000;
+  color: black;
+}
+.logo-link {
+  text-decoration: none;
+}
+
+.image-container img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: 20px 140px 1fr 0.08fr;
+  grid-template-rows: 50px 40px 40px;
+  justify-content: center;
+  align-content: end;
+}
+.card-header-btn {
+  font-family: "Archivo", sans-serif;
+  padding: 2px;
+}
+.check {
+  grid-row: 1/4;
+}
+
+.image-container {
+  grid-row: 1/4;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  margin: 10px;
+  padding-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  grid-row: 0/1;
+  grid-column: 3/4;
+  margin: 10px;
+  padding-left: 10px;
+  font-family: "Fira-sans", sans-serif;
+  color: rgb(74, 74, 206);
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: lower center;
+  text-transform: capitalize;
+}
+.linkedin {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  margin-left: 10px;
+}
+.linkedin-logo {
+  width: 50px;
+  margin: 0;
+}
+.card-info {
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+.card-info h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+.card-info p {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.job-title {
+  grid-column: 1/4;
+}
+
+.company-name {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.link-icon {
+  width: 20px;
+}
+.experiences-list {
+  text-align: left;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+.education-list {
+  text-align: left;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.previous-btn:hover {
+  background-color: #ddd;
+  color: black;
+}
+.previous-btn {
+  background-color: lightgray;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+}
+.next-btn:hover {
+  background-color: #ddd;
+  color: black;
+}
+.next-btn {
+  background-color: #04aa6d;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border: none;
+}
