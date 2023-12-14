@@ -1,6 +1,6 @@
 const Cards = (props) => {
   return (
-    <div className="Card">
+    <div className="card">
       <div className="card-header">
         <h4 className="check">
           <input type="checkbox" />
@@ -91,6 +91,8 @@ const Cards = (props) => {
           )}
         </div>
       </div>
+      <br />
+      <br />
       <hr className="solid" />
     </div>
   );

@@ -14,7 +14,10 @@ body {
 .logo-link {
   text-decoration: none;
 }
-
+.card {
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
 .image-container img {
   width: 130px;
   height: 130px;
@@ -115,6 +118,7 @@ body {
   margin-left: 0;
   padding: 0;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
