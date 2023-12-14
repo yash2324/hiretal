@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import Cards from "./cards";
 import Footer from "./footer";
+import { Shimmer } from "react-shimmer";
 const App = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [cardData, setCardData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const handlePageChange = (newPage) => {
+    setLoading(true);
     setPageNumber(newPage);
   };
 
@@ -32,6 +35,7 @@ const App = () => {
 
     const data = await response.json();
     setCardData(data?.data?.people);
+    setLoading(false);
     let string = JSON.stringify(data?.data?.people);
     localStorage.setItem(pageNumber, string);
     console.log(data);
@@ -39,6 +43,7 @@ const App = () => {
   const getData = async () => {
     if (localStorage.getItem(pageNumber)) {
       setCardData(JSON.parse(localStorage.getItem(pageNumber)));
+      setLoading(false);
     } else {
       getInitialData();
     }
@@ -46,10 +51,28 @@ const App = () => {
   return (
     <>
       <div>
-        {cardData.length > 0 ? (
+        {loading ? (
+          <>
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+          </>
+        ) : cardData.length > 0 ? (
           cardData.map((person) => <Cards key={person.id} {...person} />)
         ) : (
-          <p>No data available</p>
+          <>
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+            <hr className="solid" />
+            <Shimmer width={1500} height={500} />
+          </>
         )}
       </div>
       <Footer currentPage={pageNumber} onPageChange={handlePageChange} />

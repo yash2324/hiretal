@@ -136,6 +136,7 @@ body {
   display: inline-block;
   padding: 8px 16px;
   border: none;
+  cursor: pointer;
 }
 .next-btn:hover {
   background-color: #ddd;
@@ -150,4 +151,5 @@ body {
   display: inline-block;
   padding: 8px 30px;
   border: none;
+  cursor: pointer;
 }
